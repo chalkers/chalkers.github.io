@@ -70,4 +70,10 @@ theme: landscape
 deploy:
   type: git
   repo: git@github.com:chalkers/chalkers.github.io.git
-  branch: gh-pages
+  
+eed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  
+disqus_shortname: forefrontio

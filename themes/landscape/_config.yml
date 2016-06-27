@@ -28,9 +28,10 @@ archive_type: 'monthly'
 show_count: false
 
 # Miscellaneous
-google_analytics: 
+google_analytics: UA-658908-16
 favicon: /favicon.png
 twitter: chalkers
 google_plus:
 fb_admins:
 fb_app_id:
+gauges_analytics: 50e13905f5a1f54d79000002
