@@ -7,13 +7,15 @@ tags:
   - JavaScript
 ---
 
-The Internet of Things has the opportunity to tap in to the talent of millions of web developers, __today__. It fails to do so because of friction.
+The Internet of Things has the opportunity to tap into the talent of millions of web developers, __today__. It fails to do so because of friction.
 
-If the tools don't improve it will never happen.
+If the tools don't improve it will never happen. I hate seeing wasted potential. I want to see what people can create given familiar tools - JavaScript, in a modern workflow.
 
 <img src="/attachments/flasherjs-logo.png" width="256px" alt="Flasher.js Logo - Credit: Mat Helme" />
 
-Today marks the first step in breaking down barriers in to IoT development with the release of __Flasher.js__.
+Today marks our first step toward breaking down those barriers in to IoT development with the release of __Flasher.js__. __Flasher.js__ is the first development tool by [thingsSDK](http://thingssdk.com). 
+
+__thingsSDK__'s mission is to create a set of common APIs for Internet of Things devices in JavaScript. Ideally, the APIs could be reimplemented on any embedded JavaScript runtime or even in Node.js. The first step is making it easy getting JavaScript on to cheap, affordable microcontrollers. Then, provide the APIs and a modern workflow. 
 
 __Flasher.js__ is a simple cross-platform app that allows you to install JavaScript runtimes (and others) to ESP8266 WiFi enabled microcontrollers.
 
@@ -37,7 +39,7 @@ This should work on all ESP8266 (ESP-12) development boards. A list of tested bo
 * [WiFi Witty](http://www.aliexpress.com/item/Smart-Electronics-ESP8266-serial-WIFI-Witty-cloud-Development-Board-ESP-12F-module-MINI-nodemcu/32597903268.html) - $2.78
 
 
-Many thanks to [Craig Dennis](https://twitter.com/craigsdennis) who did the heavy lifting writing [RomComm](https://github.com/thingsSDK/flasher.js/blob/master/back-end/rom_comm.js), the internal module that actually flashes the device and [Mat Helme](https://twitter.com/mathelme) for the logo and UI designs.
+Many thanks to [Craig Dennis](https://twitter.com/craigsdennis) who did the heavy lifting writing the internal module that flashes the device and [Mat Helme](https://twitter.com/mathelme) for the logo and UI designs.
 
 ## Helping Out
 
