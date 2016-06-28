@@ -13,7 +13,7 @@ If the tools don't improve it will never happen. I hate seeing wasted potential.
 
 <img src="/attachments/flasherjs-logo.png" width="256px" alt="Flasher.js Logo - Credit: Mat Helme" />
 
-Today marks our first step toward breaking down those barriers in to IoT development with the release of __Flasher.js__. __Flasher.js__ is the first development tool by [thingsSDK](http://thingssdk.com). 
+Today marks our first step toward breaking down those barriers into IoT development with the release of __Flasher.js__. __Flasher.js__ is the first development tool by [thingsSDK](http://thingssdk.com). 
 
 __thingsSDK__'s mission is to create a set of common APIs for Internet of Things devices in JavaScript. Ideally, the APIs could be reimplemented on any embedded JavaScript runtime or even in Node.js. The first step is making it easy getting JavaScript on to cheap, affordable microcontrollers. Then, provide the APIs and a modern workflow. 
 
