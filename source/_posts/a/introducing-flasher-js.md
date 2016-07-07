@@ -1,6 +1,6 @@
 ---
 title: Introducing Flasher.js
-date: 28 Jun 2016
+date: 6 Jul 2016
 tags:
   - ESP8266
   - Espruino
@@ -23,11 +23,11 @@ __Flasher.js__ is a simple cross-platform app that allows you to install JavaScr
 
 ## Downloads
 
-Downlaod it now!
+Download it now!
 
-* Windows
-* Mac
-* Linux
+* [Windows](https://github.com/thingsSDK/flasher.js/releases/download/1.0.0/Flasher.js-Windows-1.0.0.exe)
+* [Mac](https://github.com/thingsSDK/flasher.js/releases/download/1.0.0/Flasher.js-Mac-1.0.0.dmg)
+* [Linux](https://github.com/thingsSDK/flasher.js/releases/download/1.0.0/Flasher.js-Linux-1.0.0.deb)
 
 ## Compatibility
 
