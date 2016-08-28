@@ -34,7 +34,7 @@ You'll need the following components for this project.
 
 A Passive Infrared (PIR) sensor works by detecting the infrared radiation from an object - like a human or animal. 
 
-Each PIR sensor can have different pin outs. I'm using the [Parallax 555-28027 PIR Sensor](https://www.parallax.com/sites/default/files/downloads/555-28027-PIR-Sensor-Prodcut-Doc-v2.2.pdf). If you face the sensor toward you the pins from left to right are, out ot signal, power and ground. `OUT` will send a `HIGH` signal once an infrared body is detected by the sensor. Here's a illustration of the sensor and pin out.
+Each PIR sensor can have different pin outs. I'm using the [Parallax 555-28027 PIR Sensor](https://www.parallax.com/sites/default/files/downloads/555-28027-PIR-Sensor-Prodcut-Doc-v2.2.pdf). If you face the sensor toward you the pins from left to right are, out to signal, power and ground. `OUT` will send a `HIGH` signal once an infrared body is detected by the sensor. Here's a illustration of the sensor and pin out.
 
 <img src='/attachments/iot-motion/pir.min.svg' alt='A graphic of the PIR sensor with the sensor facing toward the screen. At the bottom of the sensor there are 3 pins. Reading OUT, VCC and GND from left to right.' width="50%">
 
@@ -255,7 +255,7 @@ Now let's drag _SMS_ from the _Output_ section and type in your cell phone numbe
   Your browser does not support the video tag.
 </video> 
 
-Then connect the nodes of the workflow together. Be sure to connect the green connection point on the _Conditional_ to the _SMS_ node. This means the conition has evaluated to true.
+Then connect the nodes of the workflow together. Be sure to connect the green connection point on the _Conditional_ to the _SMS_ node. This means the condition has evaluated to true.
 
 <video controls>
   <source src="/attachments/iot-motion/connect-the-flow.mp4" type="video/mp4">
