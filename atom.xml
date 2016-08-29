@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://forefront.io/"/>
-  <updated>2016-08-29T04:27:30.292Z</updated>
+  <updated>2016-08-29T04:36:44.120Z</updated>
   <id>http://forefront.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://forefront.io/a/iot-intruder-detector/"/>
     <id>http://forefront.io/a/iot-intruder-detector/</id>
     <published>2016-08-28T07:00:00.000Z</published>
-    <updated>2016-08-29T04:27:30.292Z</updated>
+    <updated>2016-08-29T04:36:44.120Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>Want to receive a text if there’s a bump in the night? Want an SMS if your cat is drinking from the toilet again? Want to get a text if a snooping parent or sibling comes in your room? This is a project for you!</p>
 <p>We’re going to use an ESP8266 based WiFi prototyping development board - the Adafruit Feather HUZZAH and IoT platform Losant to send an SMS when an intruder is detected.</p>
@@ -108,7 +108,7 @@
 <video controls autoplay loop><br>  <source src="/attachments/iot-motion/connect-the-flow.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
 
 <p>Oh, let’s not forget to include a <em>Message Template</em> of <code>Motion Detected!</code>.</p>
-<video controls><br>  <source src="/attachments/iot-motion/message-contents.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
+<video controls autoplay loop><br>  <source src="/attachments/iot-motion/message-contents.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
 
 <p>Finally, we <strong>Deploy Workflow</strong>, meaning it’s ready to work when events come in.</p>
 <p>Unplug your device and set it up where you want to have it.</p>
