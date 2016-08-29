@@ -85,6 +85,7 @@
       
         <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>Want to receive a text if there’s a bump in the night? Want an SMS if your cat is drinking from the toilet again? Want to get a text if a snooping parent or sibling comes in your room? This is a project for you!</p>
 <p>We’re going to use an ESP8266 based WiFi prototyping development board - the Adafruit Feather HUZZAH and IoT platform Losant to send an SMS when an intruder is detected.</p>
+<p>If you’re not familiar with Losant, Losant provides a simple way for generating visualization of all your data from all of your Internet of Things devices in customizable dashboards. Losant also allows you to respond to events coming from your devices like sending you an email when one of your devices measures a low moisture reading for one of your plants. Or even better, when your moisture sensing device measures low moisture, Losant can send a command to the watering device to start the watering cycle. The great thing is that you can modify the logic of the interaction between the devices in the Losant web app without modifying a line of code on any of your devices. This can all be done through an intuitive UI. You’ll see that in action in this project.</p>
 <h2 id="Bill-of-Materials"><a href="#Bill-of-Materials" class="headerlink" title="Bill of Materials"></a>Bill of Materials</h2><p>You’ll need the following components for this project.</p>
 <ul>
 <li><a href="https://www.adafruit.com/products/64" target="_blank" rel="external">Breadboard</a></li>
@@ -151,21 +152,21 @@
 <p>Enter in a <em>Workflow Name</em> like <em>Send Notification</em> or <em>Send SMS</em> and press <strong>Save Workflow</strong>.</p>
 <p><img src="/attachments/iot-motion/create-workflow.png" alt="Screenshot showing a web form with the text Send SMS in a &#39;Workflow Name&#39; field"></p>
 <p>You are now presented with a simple drag and drop interface to create your workflow. First drag <em>Device</em> from <em>Triggers</em> in to the grid in the center of the screen.</p>
-<video controls><br>  <source src="/attachments/iot-motion/drag-device.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
+<video controls autoplay loop><br>  <source src="/attachments/iot-motion/drag-device.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
 
 <p>Then drag <em>Conditional</em> from the <em>Logic</em> panel.</p>
-<video controls><br>  <source src="/attachments/iot-motion/drag-conditional.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
+<video controls autoplay loop><br>  <source src="/attachments/iot-motion/drag-conditional.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
 
 <p>We then want to add the expression of…</p>
 <pre><code>{{ data.motion }} == true
 </code></pre><p>…in the <em>Expression</em> section of the <em>Conditional</em> panel.</p>
-<video controls><br>  <source src="/attachments/iot-motion/expression.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
+<video controls autoplay loop><br>  <source src="/attachments/iot-motion/expression.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
 
 <p>Now let’s drag <em>SMS</em> from the <em>Output</em> section and type in your cell phone number in the <em>Phone Number Template</em>.</p>
-<video controls><br>  <source src="/attachments/iot-motion/drag_enter_phone_number.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
+<video controls autoplay loop><br>  <source src="/attachments/iot-motion/drag_enter_phone_number.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
 
 <p>Then connect the nodes of the workflow together. Be sure to connect the green connection point on the <em>Conditional</em> to the <em>SMS</em> node. This means the condition has evaluated to true.</p>
-<video controls><br>  <source src="/attachments/iot-motion/connect-the-flow.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
+<video controls autoplay loop><br>  <source src="/attachments/iot-motion/connect-the-flow.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
 
 <p>Oh, let’s not forget to include a <em>Message Template</em> of <code>Motion Detected!</code>.</p>
 <video controls><br>  <source src="/attachments/iot-motion/message-contents.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
@@ -173,7 +174,7 @@
 <p>Finally, we <strong>Deploy Workflow</strong>, meaning it’s ready to work when events come in.</p>
 <p>Unplug your device and set it up where you want to have it.</p>
 <p>Now it’s time to see if it works!</p>
-<video controls><br>  <source src="/attachments/iot-motion/its-alive.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
+<video controls autoplay loop><br>  <source src="/attachments/iot-motion/its-alive.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
 
 <p>And it does! Awesome!</p>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Losant limits the SMS service to 1 per minute, which is fine for our purposes, but you can integrate with third party services such as telecom API provider Twilio which doesn’t have that restriction. </p>
@@ -182,7 +183,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://forefront.io/a/iot-intruder-detector/" data-id="cisf3b3fh0007uafocfeh3ayy" class="article-share-link">Share</a>
+      <a data-url="http://forefront.io/a/iot-intruder-detector/" data-id="cisfjxc3w000733fomwpue56c" class="article-share-link">Share</a>
       
         <a href="http://forefront.io/a/iot-intruder-detector/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -244,7 +245,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://forefront.io/a/introducing-flasher-js/" data-id="cisf3b3ff0006uafo8f7zowya" class="article-share-link">Share</a>
+      <a data-url="http://forefront.io/a/introducing-flasher-js/" data-id="cisfjxc3v000633fo4uf9n1wl" class="article-share-link">Share</a>
       
         <a href="http://forefront.io/a/introducing-flasher-js/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -301,7 +302,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://forefront.io/a/origins-of-broken-computers/" data-id="cisf3b3fw000buafozutel3b2" class="article-share-link">Share</a>
+      <a data-url="http://forefront.io/a/origins-of-broken-computers/" data-id="cisfjxc40000a33foyi3fmwit" class="article-share-link">Share</a>
       
         <a href="http://forefront.io/a/origins-of-broken-computers/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -360,7 +361,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://forefront.io/a/that-maker-show-18/" data-id="cisf3b3gn000yuafouffzf8gw" class="article-share-link">Share</a>
+      <a data-url="http://forefront.io/a/that-maker-show-18/" data-id="cisfjxc4k000z33fo2h29hqby" class="article-share-link">Share</a>
       
         <a href="http://forefront.io/a/that-maker-show-18/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -414,7 +415,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://forefront.io/a/that-maker-show-17/" data-id="cisf3b3gl000vuafo87ce2b6s" class="article-share-link">Share</a>
+      <a data-url="http://forefront.io/a/that-maker-show-17/" data-id="cisfjxc4g000u33fo51qjppd4" class="article-share-link">Share</a>
       
         <a href="http://forefront.io/a/that-maker-show-17/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -471,7 +472,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://forefront.io/a/that-maker-show-16/" data-id="cisf3b3gh000quafo1o0qt6jj" class="article-share-link">Share</a>
+      <a data-url="http://forefront.io/a/that-maker-show-16/" data-id="cisfjxc54001m33fo9cfawhmm" class="article-share-link">Share</a>
       
         <a href="http://forefront.io/a/that-maker-show-16/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -528,7 +529,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://forefront.io/a/that-maker-show-15/" data-id="cisf3b3ge000nuafof2qv34f9" class="article-share-link">Share</a>
+      <a data-url="http://forefront.io/a/that-maker-show-15/" data-id="cisfjxc4e000p33focm61xujw" class="article-share-link">Share</a>
       
         <a href="http://forefront.io/a/that-maker-show-15/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -583,7 +584,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://forefront.io/a/that-maker-show-14/" data-id="cisf3b3g9000kuafobcu2y4fw" class="article-share-link">Share</a>
+      <a data-url="http://forefront.io/a/that-maker-show-14/" data-id="cisfjxc4f000s33fo5e7bncoz" class="article-share-link">Share</a>
       
         <a href="http://forefront.io/a/that-maker-show-14/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -639,7 +640,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://forefront.io/a/that-maker-show-13/" data-id="cisf3b3g7000iuafoyh9dxgc5" class="article-share-link">Share</a>
+      <a data-url="http://forefront.io/a/that-maker-show-13/" data-id="cisfjxc4a000l33fouhvnblsa" class="article-share-link">Share</a>
       
         <a href="http://forefront.io/a/that-maker-show-13/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -694,7 +695,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://forefront.io/a/that-maker-show-12/" data-id="cisf3b3g6000huafo5it8m321" class="article-share-link">Share</a>
+      <a data-url="http://forefront.io/a/that-maker-show-12/" data-id="cisfjxc46000f33fo4ok1ahxf" class="article-share-link">Share</a>
       
         <a href="http://forefront.io/a/that-maker-show-12/#disqus_thread" class="article-comment-link">Comments</a>
       

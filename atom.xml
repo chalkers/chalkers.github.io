@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://forefront.io/"/>
-  <updated>2016-08-28T20:46:06.923Z</updated>
+  <updated>2016-08-29T04:27:30.292Z</updated>
   <id>http://forefront.io/</id>
   
   <author>
@@ -20,10 +20,11 @@
     <link href="http://forefront.io/a/iot-intruder-detector/"/>
     <id>http://forefront.io/a/iot-intruder-detector/</id>
     <published>2016-08-28T07:00:00.000Z</published>
-    <updated>2016-08-28T20:46:06.923Z</updated>
+    <updated>2016-08-29T04:27:30.292Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>Want to receive a text if there’s a bump in the night? Want an SMS if your cat is drinking from the toilet again? Want to get a text if a snooping parent or sibling comes in your room? This is a project for you!</p>
 <p>We’re going to use an ESP8266 based WiFi prototyping development board - the Adafruit Feather HUZZAH and IoT platform Losant to send an SMS when an intruder is detected.</p>
+<p>If you’re not familiar with Losant, Losant provides a simple way for generating visualization of all your data from all of your Internet of Things devices in customizable dashboards. Losant also allows you to respond to events coming from your devices like sending you an email when one of your devices measures a low moisture reading for one of your plants. Or even better, when your moisture sensing device measures low moisture, Losant can send a command to the watering device to start the watering cycle. The great thing is that you can modify the logic of the interaction between the devices in the Losant web app without modifying a line of code on any of your devices. This can all be done through an intuitive UI. You’ll see that in action in this project.</p>
 <h2 id="Bill-of-Materials"><a href="#Bill-of-Materials" class="headerlink" title="Bill of Materials"></a>Bill of Materials</h2><p>You’ll need the following components for this project.</p>
 <ul>
 <li><a href="https://www.adafruit.com/products/64" target="_blank" rel="external">Breadboard</a></li>
@@ -90,21 +91,21 @@
 <p>Enter in a <em>Workflow Name</em> like <em>Send Notification</em> or <em>Send SMS</em> and press <strong>Save Workflow</strong>.</p>
 <p><img src="/attachments/iot-motion/create-workflow.png" alt="Screenshot showing a web form with the text Send SMS in a &#39;Workflow Name&#39; field"></p>
 <p>You are now presented with a simple drag and drop interface to create your workflow. First drag <em>Device</em> from <em>Triggers</em> in to the grid in the center of the screen.</p>
-<video controls><br>  <source src="/attachments/iot-motion/drag-device.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
+<video controls autoplay loop><br>  <source src="/attachments/iot-motion/drag-device.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
 
 <p>Then drag <em>Conditional</em> from the <em>Logic</em> panel.</p>
-<video controls><br>  <source src="/attachments/iot-motion/drag-conditional.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
+<video controls autoplay loop><br>  <source src="/attachments/iot-motion/drag-conditional.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
 
 <p>We then want to add the expression of…</p>
 <pre><code>{{ data.motion }} == true
 </code></pre><p>…in the <em>Expression</em> section of the <em>Conditional</em> panel.</p>
-<video controls><br>  <source src="/attachments/iot-motion/expression.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
+<video controls autoplay loop><br>  <source src="/attachments/iot-motion/expression.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
 
 <p>Now let’s drag <em>SMS</em> from the <em>Output</em> section and type in your cell phone number in the <em>Phone Number Template</em>.</p>
-<video controls><br>  <source src="/attachments/iot-motion/drag_enter_phone_number.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
+<video controls autoplay loop><br>  <source src="/attachments/iot-motion/drag_enter_phone_number.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
 
 <p>Then connect the nodes of the workflow together. Be sure to connect the green connection point on the <em>Conditional</em> to the <em>SMS</em> node. This means the condition has evaluated to true.</p>
-<video controls><br>  <source src="/attachments/iot-motion/connect-the-flow.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
+<video controls autoplay loop><br>  <source src="/attachments/iot-motion/connect-the-flow.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
 
 <p>Oh, let’s not forget to include a <em>Message Template</em> of <code>Motion Detected!</code>.</p>
 <video controls><br>  <source src="/attachments/iot-motion/message-contents.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
@@ -112,7 +113,7 @@
 <p>Finally, we <strong>Deploy Workflow</strong>, meaning it’s ready to work when events come in.</p>
 <p>Unplug your device and set it up where you want to have it.</p>
 <p>Now it’s time to see if it works!</p>
-<video controls><br>  <source src="/attachments/iot-motion/its-alive.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
+<video controls autoplay loop><br>  <source src="/attachments/iot-motion/its-alive.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
 
 <p>And it does! Awesome!</p>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Losant limits the SMS service to 1 per minute, which is fine for our purposes, but you can integrate with third party services such as telecom API provider Twilio which doesn’t have that restriction. </p>
