@@ -289,3 +289,5 @@ And it does! Awesome!
 Losant limits the SMS service to 1 per minute, which is fine for our purposes, but you can integrate with third party services such as telecom API provider Twilio which doesn't have that restriction. 
 
 Taking the project further, you may want to add a button to "Arm" the device, with an LED indicator, so it doesn't send the motion detection JSON when you're expecting movement. 
+
+If you like this project why not give it some _Respect_ on [Hackster.io](https://www.hackster.io/chalkers/internet-of-things-intruder-detector-e45246)?
