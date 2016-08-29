@@ -225,14 +225,14 @@ Enter in a _Workflow Name_ like _Send Notification_ or _Send SMS_ and press **Sa
 
 You are now presented with a simple drag and drop interface to create your workflow. First drag _Device_ from _Triggers_ in to the grid in the center of the screen.
 
-<video controls>
+<video controls autoplay loop>
   <source src="/attachments/iot-motion/drag-device.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
 
 Then drag _Conditional_ from the _Logic_ panel.
 
-<video controls>
+<video controls autoplay loop>
   <source src="/attachments/iot-motion/drag-conditional.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
@@ -245,21 +245,21 @@ We then want to add the expression of...
 
 ...in the _Expression_ section of the _Conditional_ panel.
 
-<video controls>
+<video controls autoplay loop>
   <source src="/attachments/iot-motion/expression.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
 
 Now let's drag _SMS_ from the _Output_ section and type in your cell phone number in the _Phone Number Template_.
 
-<video controls>
+<video controls autoplay loop>
   <source src="/attachments/iot-motion/drag_enter_phone_number.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
 
 Then connect the nodes of the workflow together. Be sure to connect the green connection point on the _Conditional_ to the _SMS_ node. This means the condition has evaluated to true.
 
-<video controls>
+<video controls autoplay loop>
   <source src="/attachments/iot-motion/connect-the-flow.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
@@ -277,7 +277,7 @@ Unplug your device and set it up where you want to have it.
 
 Now it's time to see if it works!
 
-<video controls>
+<video controls autoplay loop>
   <source src="/attachments/iot-motion/its-alive.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
