@@ -266,7 +266,7 @@ Then connect the nodes of the workflow together. Be sure to connect the green co
 
 Oh, let's not forget to include a _Message Template_ of `Motion Detected!`.
 
-<video controls>
+<video controls autoplay loop>
   <source src="/attachments/iot-motion/message-contents.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
