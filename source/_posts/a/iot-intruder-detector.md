@@ -15,6 +15,8 @@ Want to receive a text if there's a bump in the night? Want an SMS if your cat i
 
 We're going to use an ESP8266 based WiFi prototyping development board - the Adafruit Feather HUZZAH and IoT platform Losant to send an SMS when an intruder is detected.
 
+If you're not familiar with Losant, Losant provides a simple way for generating visualization of all your data from all of your Internet of Things devices in customizable dashboards. Losant also allows you to respond to events coming from your devices like sending you an email when one of your devices measures a low moisture reading for one of your plants. Or even better when your moisture sensing device measures low moisture, Losant can send a command to the watering device to start the watering cycle. The great thing is that you can modify the logic of the interaction between the devices in the Losant web app without modifying a line of code on your devices. This can all be done through an intuitive UI. You'll see that in action in this project.
+
 ## Bill of Materials
 
 You'll need the following components for this project.
