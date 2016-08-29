@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Internet of Things Intruder Detector | Forefront.io</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="OverviewWant to receive a text if there’s a bump in the night? Want an SMS if your cat is drinking from the toilet again? Want to get a text if a snooping parent or sibling comes in your room? This is">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Internet of Things Intruder Detector">
+<meta property="og:url" content="http://forefront.io/a/iot-intruder-detector/index.html">
+<meta property="og:site_name" content="Forefront.io">
+<meta property="og:description" content="OverviewWant to receive a text if there’s a bump in the night? Want an SMS if your cat is drinking from the toilet again? Want to get a text if a snooping parent or sibling comes in your room? This is">
+<meta property="og:image" content="http://forefront.io/attachments/iot-motion/pir.min.svg">
+<meta property="og:image" content="http://forefront.io/attachments/iot-motion/feather-huzzah.min.svg">
+<meta property="og:image" content="http://forefront.io/attachments/iot-motion/wiring-motion-sensor.min.svg">
+<meta property="og:image" content="http://forefront.io/attachments/iot-motion/irl.png">
+<meta property="og:image" content="http://forefront.io/attachments/iot-motion/create_application.png">
+<meta property="og:image" content="http://forefront.io/attachments/iot-motion/access-key.png">
+<meta property="og:image" content="http://forefront.io/attachments/iot-motion/access_key_and_secret.png">
+<meta property="og:image" content="http://forefront.io/attachments/iot-motion/device-menu.png">
+<meta property="og:image" content="http://forefront.io/attachments/iot-motion/blank.png">
+<meta property="og:image" content="http://forefront.io/attachments/iot-motion/new-device.png">
+<meta property="og:image" content="http://forefront.io/attachments/iot-motion/device-attributes.png">
+<meta property="og:image" content="http://forefront.io/attachments/iot-motion/bedroom-device-id.png">
+<meta property="og:image" content="http://forefront.io/attachments/iot-motion/workflow-menu.png">
+<meta property="og:image" content="http://forefront.io/attachments/iot-motion/create-workflow.png">
+<meta property="og:updated_time" content="2016-08-28T20:46:06.923Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Internet of Things Intruder Detector">
+<meta name="twitter:description" content="OverviewWant to receive a text if there’s a bump in the night? Want an SMS if your cat is drinking from the toilet again? Want to get a text if a snooping parent or sibling comes in your room? This is">
+<meta name="twitter:image" content="http://forefront.io/attachments/iot-motion/pir.min.svg">
+<meta name="twitter:creator" content="@chalkers">
+  
+    <link rel="alternate" href="/atom.xml" title="Forefront.io" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Forefront.io</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://forefront.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-a/iot-intruder-detector" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/a/iot-intruder-detector/" class="article-date">
+  <time datetime="2016-08-28T07:00:00.000Z" itemprop="datePublished">Sunday, 28th August 2016</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Internet of Things Intruder Detector
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>Want to receive a text if there’s a bump in the night? Want an SMS if your cat is drinking from the toilet again? Want to get a text if a snooping parent or sibling comes in your room? This is a project for you!</p>
+<p>We’re going to use an ESP8266 based WiFi prototyping development board - the Adafruit Feather HUZZAH and IoT platform Losant to send an SMS when an intruder is detected.</p>
+<h2 id="Bill-of-Materials"><a href="#Bill-of-Materials" class="headerlink" title="Bill of Materials"></a>Bill of Materials</h2><p>You’ll need the following components for this project.</p>
+<ul>
+<li><a href="https://www.adafruit.com/products/64" target="_blank" rel="external">Breadboard</a></li>
+<li><a href="https://www.adafruit.com/products/2821" target="_blank" rel="external">Adafruit Feather HUZZAH</a></li>
+<li><a href="https://www.adafruit.com/products/153" target="_blank" rel="external">Jumper wires</a></li>
+<li><a href="http://www.frys.com/product/6726705" target="_blank" rel="external">Passive Infrared (PIR) Sensor</a> </li>
+<li>Micro-USB cable</li>
+<li>Any USB power supply</li>
+</ul>
+<h2 id="Services-Used"><a href="#Services-Used" class="headerlink" title="Services Used"></a>Services Used</h2><ul>
+<li><a href="https://www.losant.com/" target="_blank" rel="external">Losant</a></li>
+</ul>
+<h2 id="Wiring"><a href="#Wiring" class="headerlink" title="Wiring"></a>Wiring</h2><p>A Passive Infrared (PIR) sensor works by detecting the infrared radiation from an object - like a human or animal. </p>
+<p>Each PIR sensor can have different pin outs. I’m using the <a href="https://www.parallax.com/sites/default/files/downloads/555-28027-PIR-Sensor-Prodcut-Doc-v2.2.pdf" target="_blank" rel="external">Parallax 555-28027 PIR Sensor</a>. If you face the sensor toward you the pins from left to right are, out to signal, power and ground. <code>OUT</code> will send a <code>HIGH</code> signal once an infrared body is detected by the sensor. Here’s a illustration of the sensor and pin out.</p>
+<p><img src="/attachments/iot-motion/pir.min.svg" alt="A graphic of the PIR sensor with the sensor facing toward the screen. At the bottom of the sensor there are 3 pins. Reading OUT, VCC and GND from left to right." width="50%"></p>
+<p>Here’s what the Adafruit Feather HUZZAH looks like - big style!</p>
+<p><img src="/attachments/iot-motion/feather-huzzah.min.svg" alt="A graphic of the Adafruit Feather HUZZAH" width="80%"></p>
+<p>Wire up the <code>VCC</code> on the PIR sensor to <code>3V</code> on the HUZZAH, the <code>GND</code> pin on the PIR sensor to the <code>GND</code> on the HUZZAH. The sensor should be working now. There’s a red LED that comes on when the sensor detects a body. Finally connect the <code>OUT</code> from the PIR sensor to any digital pin on the HUZZAH. I picked <code>12</code>. </p>
+<p><img src="/attachments/iot-motion/wiring-motion-sensor.min.svg" alt="A graphic of the wiring for the PIR sensor to the Feather HUZZAH showing a yellow wire going from OUT on the PIR to pin 12 on the HUZZAH, a red wire going from VCC on the PIR to 3V on the Huzzah and a black wire connecting the GND pins on the PIR and HUZZAH." width="80%"></p>
+<p>Here’s how it looks <abbr title="In Real Life">IRL</abbr>.</p>
+<p><img src="/attachments/iot-motion/irl.png" alt="A photo of a breadboard with a Adafruit Feather HUZZAH and PIR sensor connected. There's a white wire connecting power, black ground and yellow for OUT and 12."></p>
+<p>For further reading on the PIR sensor visit the <a href="https://www.parallax.com/sites/default/files/downloads/555-28027-PIR-Sensor-Prodcut-Doc-v2.2.pdf" target="_blank" rel="external">Parallex Website</a> or Adafruit’s Learning System for the <a href="https://learn.adafruit.com/adafruit-feather-huzzah-esp8266" target="_blank" rel="external">Feather HUZZAH</a>.</p>
+<h2 id="Arduino-Code"><a href="#Arduino-Code" class="headerlink" title="Arduino Code"></a>Arduino Code</h2><p>The Adafruit Feather HUZZAH is Arduino compatible, so we’ll be using the <a href="https://www.arduino.cc/en/Main/Software" target="_blank" rel="external">Arduino IDE</a>. If you’re new to Arduino you should check out <a href="http://forefront.io/a/beginners-guide-to-arduino/">The Absolute Beginner’s Guide to Arduino</a>.</p>
+<p>The Arduino IDE doesn’t come working “out-of-the-box” with the Feather HUZZAH. To get it up and running take a quick detour to <a href="https://learn.adafruit.com/adafruit-io-basics-esp8266-arduino/overview?view=all#using-arduino-ide" target="_blank" rel="external">Adafruit’s Learning Guide</a>. When the IDE has been set up, let’s get ready to code.</p>
+<p>Our Arduino code needs to do the following things:</p>
+<ol>
+<li>Connect and reconnect to WiFi (<code>connect()</code> and <code>reconnect()</code>)</li>
+<li>Connect and reconnect to the Losant IoT platform  (<code>connect()</code> and <code>reconnect()</code>)</li>
+<li>Read the PIR sensor (<code>int currentRead = digitalRead(MOTION_PIN);</code>)</li>
+<li>Send a message to Losant when motion of an infrared body has been detected (<code>motionDetected()</code>)</li>
+</ol>
+<p>The Arduino code is below and requires the <a href="https://github.com/Losant/losant-mqtt-arduino" target="_blank" rel="external">Losant mqtt library for Arduino</a>. See the <a href="https://github.com/Losant/losant-mqtt-arduino/blob/master/README.md" target="_blank" rel="external">README.md</a> for other dependencies.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ESP8266WiFi.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;Losant.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="comment">// WiFi credentials</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">char</span>* WIFI_SSID = <span class="string">"&lt;YOUR SSID&gt;"</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">char</span>* WIFI_PASS = <span class="string">"&lt;YOUR PASSWORD&gt;"</span>;</div><div class="line"></div><div class="line"><span class="comment">// Losant credentials</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">char</span>* LOSANT_DEVICE_ID = <span class="string">"&lt;LOSANT_DEVICE_ID&gt;"</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">char</span>* LOSANT_ACCESS_KEY = <span class="string">"&lt;LOSANT ACCESS KEY&gt;"</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">char</span>* LOSANT_ACCESS_SECRET = <span class="string">"&lt;LOSANT ACCESS SECRET&gt;"</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MOTION_PIN = <span class="number">12</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> motionState = <span class="number">0</span>;</div><div class="line"></div><div class="line">WiFiClientSecure wifiClient;</div><div class="line"></div><div class="line"><span class="function">LosantDevice <span class="title">device</span><span class="params">(LOSANT_DEVICE_ID)</span></span>;</div><div class="line"></div><div class="line"><span class="comment">// Connect to WiFi</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">connect</span><span class="params">()</span> </span>&#123;</div><div class="line">  WiFi.begin(WIFI_SSID, WIFI_PASS);</div><div class="line"></div><div class="line">  <span class="keyword">while</span>(WiFi.status() != WL_CONNECTED) &#123;</div><div class="line">    delay(<span class="number">500</span>);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  device.connectSecure(wifiClient, LOSANT_ACCESS_KEY, LOSANT_ACCESS_SECRET);</div><div class="line"></div><div class="line">  <span class="keyword">unsigned</span> <span class="keyword">long</span> connectionStart = millis();</div><div class="line">  <span class="keyword">while</span>(!device.connected()) &#123;</div><div class="line">    delay(<span class="number">500</span>);</div><div class="line">    <span class="comment">// If we can't connect after 5 seconds, restart the board.</span></div><div class="line">    <span class="keyword">if</span>(millis() - connectionStart &gt; <span class="number">5000</span>) &#123;</div><div class="line">      <span class="comment">// Failed to connect to Losant, restarting board.</span></div><div class="line">      ESP.restart();</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">//Device should be connected now and is now ready for use!</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// Reconnects if required </span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">reconnect</span><span class="params">()</span> </span>&#123;</div><div class="line"> <span class="keyword">bool</span> toReconnect = <span class="literal">false</span>;</div><div class="line"></div><div class="line">  <span class="comment">// If the WiFi or HUZZAH is not connected to Losant - we should reconnect</span></div><div class="line">  <span class="keyword">if</span>(WiFi.status() != WL_CONNECTED || !device.connected()) &#123;</div><div class="line">    toReconnect = <span class="literal">true</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">if</span>(toReconnect) &#123;</div><div class="line">    connect();</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">motionDetected</span><span class="params">()</span> </span>&#123;</div><div class="line">  <span class="comment">// Losant uses a JSON protocol. Construct the simple state object.</span></div><div class="line">  <span class="comment">// &#123; "motion" : true &#125;</span></div><div class="line">  StaticJsonBuffer&lt;<span class="number">200</span>&gt; jsonBuffer;</div><div class="line">  JsonObject&amp; root = jsonBuffer.createObject();</div><div class="line">  root[<span class="string">"motion"</span>] = <span class="literal">true</span>;</div><div class="line"></div><div class="line">  <span class="comment">// Send the state to Losant.</span></div><div class="line">  device.sendState(root);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span> </span>&#123;</div><div class="line">  pinMode(MOTION_PIN, INPUT);</div><div class="line">  connect();</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span> </span>&#123;</div><div class="line">  reconnect();</div><div class="line">  device.loop();</div><div class="line"></div><div class="line">  <span class="comment">// Read the sensor</span></div><div class="line">  <span class="keyword">int</span> currentRead = digitalRead(MOTION_PIN);</div><div class="line"></div><div class="line">  <span class="comment">// If motion is detected we don't want to 'spam' the service</span></div><div class="line">  <span class="keyword">if</span>(currentRead != motionState) &#123;</div><div class="line">    motionState = currentRead;</div><div class="line">    <span class="keyword">if</span>(motionState) &#123;</div><div class="line">      motionDetected();</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  delay(<span class="number">100</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Fill in your SSID for <code>WIFI_SSID</code> and WiFi password for <code>WIFI_PASS</code>.</p>
+<p>This only leaves the Losant credentials.</p>
+<h2 id="Setting-up-Losant"><a href="#Setting-up-Losant" class="headerlink" title="Setting up Losant"></a>Setting up Losant</h2><p>To connect to Losant you require 3 things:</p>
+<ol>
+<li>A <em>Device ID</em> to identify the device from another device (<code>LOSANT_DEVICE_ID</code>)</li>
+<li>An access key (<code>LOSANT_ACCESS_KEY</code>)</li>
+<li>An access secret (<code>LOSANT_ACCESS_SECRET</code>)</li>
+</ol>
+<p>If you haven’t signed up to Losant yet, do that now at <a href="http://losant.com" target="_blank" rel="external">Losant.com</a> - it’s free for our use case.</p>
+<p>First we need to create an application by going to <strong>Applications</strong> &gt; <strong>+ Create Application</strong> from the drop down menus.</p>
+<p>I’m calling mine <strong>Security System</strong>.</p>
+<p><img src="/attachments/iot-motion/create_application.png" alt="Screenshot of a web form containing an application name and description field. Application name has the words &#39;Security System&#39; entered in."></p>
+<p>Now we can create an Access Key. Visit the <strong>Access Keys</strong> link, then <strong>+ Add Access Key</strong>.</p>
+<p><img src="/attachments/iot-motion/access-key.png" alt="Screenshot showing the Add Access Key button screen"></p>
+<p>Then, simply press <strong>Create Access Key</strong> for <em>All Devices</em>. You’ll be presented with an Access Key and Access Secret. These will be <code>LOSANT_ACCESS_KEY</code> and <code>LOSANT_ACCESS_SECRET</code> respectively in your Arduino code. Keep your secret safe. If you loose it you have to regenerate it and update all your devices with the new secret.</p>
+<p><img src="/attachments/iot-motion/access_key_and_secret.png" alt="Screenshot showing the access key and secret obscured by blue bars"></p>
+<p>Now we need to create a device to get a <em>Device ID</em> to put in to our Aruino code to assign to the <code>LOSANT_DEVICE_ID</code> constant.</p>
+<p><img src="/attachments/iot-motion/device-menu.png" alt="Screenshot showing the menu for creating a device"></p>
+<p>Then click on <strong>Create Blank Device</strong>. </p>
+<p><img src="/attachments/iot-motion/blank.png" alt="Screenshot showing the Create Blank Device"></p>
+<p>Then we can create a new device. Let’s give the device a <em>Name</em> of <code>Bedroom</code> since this is going to be where the device will be. Then keep the <em>Device Type</em> set to <em>Standalone</em>, since it connects directly to Losant.</p>
+<p><img src="/attachments/iot-motion/new-device.png" alt="Screenshot showing the a web form with Device Name filled in with &#39;Bedroom&#39; and Device Type set to &#39;Standalone&#39;"></p>
+<p>Then you can specify the <em>Device Attributes</em> that the device will send to Losant. In our case it’s a boolean value of <code>motion</code>. You can have as many device attributes as you’d like, like a temperature reading or humidity reading. Device attributes are contained in the JSON that we send from the device in the <code>motionDetected()</code> function to Losant.</p>
+<p><img src="/attachments/iot-motion/device-attributes.png" alt="Screenshot showing the a web form with a Device Attribute named &#39;motion&#39; set to the Data Type &#39;Boolean&#39;"></p>
+<p>Then click <strong>Create Device</strong>. You’ll now get a <em>Device ID</em>. You can copy and paste that for your <code>LOSANT_DEVICE_ID</code>.</p>
+<p><img src="/attachments/iot-motion/bedroom-device-id.png" alt="Screenshot showing the new Device ID"></p>
+<p>Awesome, we have all the required strings for the Arduino Skecth. Update the values for <code>LOSANT_DEVICE_ID</code>, <code>LOSANT_ACCESS_KEY</code> and <code>LOSANT_ACCESS_SECRET</code> and <em>Upload</em> your Arduino Sketch to the Adafruit Feather HUZZAH.</p>
+<p>The final step is to get Losant to send us a text message when the motion state is <code>true</code>. To do this we need to create a <em>Workflow</em>. A <em>Workflow</em> is work triggered by your device’s states. In our case we want Losant to send an SMS message (the work) when the <code>motion</code> event occurs and is the value of <code>true</code>.</p>
+<p>Create a Workflow from the drop down menus.</p>
+<p><img src="/attachments/iot-motion/workflow-menu.png" alt="Screenshot showing the menu for creating a workflow"></p>
+<p>Enter in a <em>Workflow Name</em> like <em>Send Notification</em> or <em>Send SMS</em> and press <strong>Save Workflow</strong>.</p>
+<p><img src="/attachments/iot-motion/create-workflow.png" alt="Screenshot showing a web form with the text Send SMS in a &#39;Workflow Name&#39; field"></p>
+<p>You are now presented with a simple drag and drop interface to create your workflow. First drag <em>Device</em> from <em>Triggers</em> in to the grid in the center of the screen.</p>
+<video controls><br>  <source src="/attachments/iot-motion/drag-device.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
+
+<p>Then drag <em>Conditional</em> from the <em>Logic</em> panel.</p>
+<video controls><br>  <source src="/attachments/iot-motion/drag-conditional.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
+
+<p>We then want to add the expression of…</p>
+<pre><code>{{ data.motion }} == true
+</code></pre><p>…in the <em>Expression</em> section of the <em>Conditional</em> panel.</p>
+<video controls><br>  <source src="/attachments/iot-motion/expression.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
+
+<p>Now let’s drag <em>SMS</em> from the <em>Output</em> section and type in your cell phone number in the <em>Phone Number Template</em>.</p>
+<video controls><br>  <source src="/attachments/iot-motion/drag_enter_phone_number.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
+
+<p>Then connect the nodes of the workflow together. Be sure to connect the green connection point on the <em>Conditional</em> to the <em>SMS</em> node. This means the condition has evaluated to true.</p>
+<video controls><br>  <source src="/attachments/iot-motion/connect-the-flow.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
+
+<p>Oh, let’s not forget to include a <em>Message Template</em> of <code>Motion Detected!</code>.</p>
+<video controls><br>  <source src="/attachments/iot-motion/message-contents.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
+
+<p>Finally, we <strong>Deploy Workflow</strong>, meaning it’s ready to work when events come in.</p>
+<p>Unplug your device and set it up where you want to have it.</p>
+<p>Now it’s time to see if it works!</p>
+<video controls><br>  <source src="/attachments/iot-motion/its-alive.mp4" type="video/mp4"><br>  Your browser does not support the video tag.<br></video> 
+
+<p>And it does! Awesome!</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Losant limits the SMS service to 1 per minute, which is fine for our purposes, but you can integrate with third party services such as telecom API provider Twilio which doesn’t have that restriction. </p>
+<p>Taking the project further, you may want to add a button to “Arm” the device, with an LED indicator, so it doesn’t send the motion detection JSON when you’re expecting movement. </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://forefront.io/a/iot-intruder-detector/" data-id="cisf3b3fh0007uafocfeh3ayy" class="article-share-link">Share</a>
+      
+        <a href="http://forefront.io/a/iot-intruder-detector/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Arduino/">Arduino</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ESP8266/">ESP8266</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Internet-of-Things/">Internet of Things</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Losant/">Losant</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PIR-Sensor/">PIR Sensor</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/a/introducing-flasher-js/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Introducing Flasher.js</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/That-Maker-Show/">That Maker Show</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Adafruit/">Adafruit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apple/">Apple</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Arduino/">Arduino</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Blog/">Blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ESP8266/">ESP8266</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Espruino/">Espruino</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IR/">IR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Internet-of-Things/">Internet of Things</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kinect/">Kinect</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LED/">LED</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Losant/">Losant</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PIR-Sensor/">PIR Sensor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Piezo/">Piezo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Processing/">Processing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RF/">RF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Reverse-Engineering/">Reverse Engineering</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Show-and-Tell/">Show and Tell</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Adafruit/" style="font-size: 10px;">Adafruit</a> <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/Arduino/" style="font-size: 20px;">Arduino</a> <a href="/tags/Blog/" style="font-size: 13.33px;">Blog</a> <a href="/tags/ESP8266/" style="font-size: 13.33px;">ESP8266</a> <a href="/tags/Espruino/" style="font-size: 10px;">Espruino</a> <a href="/tags/IR/" style="font-size: 10px;">IR</a> <a href="/tags/Internet-of-Things/" style="font-size: 10px;">Internet of Things</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Kinect/" style="font-size: 10px;">Kinect</a> <a href="/tags/LED/" style="font-size: 10px;">LED</a> <a href="/tags/Losant/" style="font-size: 10px;">Losant</a> <a href="/tags/PIR-Sensor/" style="font-size: 10px;">PIR Sensor</a> <a href="/tags/Piezo/" style="font-size: 10px;">Piezo</a> <a href="/tags/Processing/" style="font-size: 10px;">Processing</a> <a href="/tags/RF/" style="font-size: 10px;">RF</a> <a href="/tags/Reverse-Engineering/" style="font-size: 16.67px;">Reverse Engineering</a> <a href="/tags/Show-and-Tell/" style="font-size: 10px;">Show and Tell</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/02/">February 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/01/">January 2013</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/a/iot-intruder-detector/">Internet of Things Intruder Detector</a>
+          </li>
+        
+          <li>
+            <a href="/a/introducing-flasher-js/">Introducing Flasher.js</a>
+          </li>
+        
+          <li>
+            <a href="/a/origins-of-broken-computers/">The Origins of &quot;Broken&quot; Computers (and Software)</a>
+          </li>
+        
+          <li>
+            <a href="/a/that-maker-show-18/">That Maker Show Ep. 18</a>
+          </li>
+        
+          <li>
+            <a href="/a/that-maker-show-17/">That Maker Show Ep. 17</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Andrew Chalkley<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'forefrontio';
+  
+  var disqus_url = 'http://forefront.io/a/iot-intruder-detector/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-658908-16', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+<!-- Gaug.es Analytics -->
+<script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '50e13905f5a1f54d79000002');
+    t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+    t.src = 'https://d36ee2fcip1434.cloudfront.net/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+<!-- End Gaug.es Analytics -->
+
+
+  </div>
+</body>
+</html>

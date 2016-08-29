@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hacking a $9 Remote Controlled Car with Arduino | Forefront.io</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Last night I picked up a Ford Mustang 1:24 Scale Radio Control Sports Car from Walmart for under 9 bucks.
+I’ve seen electronics enthusiasts and makers buy cheap RF cars and use parts for their projec">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hacking a $9 Remote Controlled Car with Arduino">
+<meta property="og:url" content="http://forefront.io/a/hacking-9-buck-remote-controlled-car-with-arduino/index.html">
+<meta property="og:site_name" content="Forefront.io">
+<meta property="og:description" content="Last night I picked up a Ford Mustang 1:24 Scale Radio Control Sports Car from Walmart for under 9 bucks.
+I’ve seen electronics enthusiasts and makers buy cheap RF cars and use parts for their projec">
+<meta property="og:image" content="http://forefront.io/attachments/car-hacking/car.jpg">
+<meta property="og:image" content="http://forefront.io/attachments/car-hacking/remote_apart.jpg">
+<meta property="og:image" content="http://forefront.io/attachments/car-hacking/remote_power.jpg">
+<meta property="og:image" content="http://forefront.io/attachments/car-hacking/wiring_it_up.jpg">
+<meta property="og:updated_time" content="2016-08-28T20:43:02.946Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hacking a $9 Remote Controlled Car with Arduino">
+<meta name="twitter:description" content="Last night I picked up a Ford Mustang 1:24 Scale Radio Control Sports Car from Walmart for under 9 bucks.
+I’ve seen electronics enthusiasts and makers buy cheap RF cars and use parts for their projec">
+<meta name="twitter:image" content="http://forefront.io/attachments/car-hacking/car.jpg">
+<meta name="twitter:creator" content="@chalkers">
+  
+    <link rel="alternate" href="/atom.xml" title="Forefront.io" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Forefront.io</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://forefront.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-a/hacking-9-buck-remote-controlled-car-with-arduino" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/a/hacking-9-buck-remote-controlled-car-with-arduino/" class="article-date">
+  <time datetime="2013-07-14T07:00:00.000Z" itemprop="datePublished">Sunday, 14th July 2013</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hacking a $9 Remote Controlled Car with Arduino
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/attachments/car-hacking/car.jpg" alt=""></p>
+<p>Last night I picked up a <a href="http://www.newbright.com/product/view/id/219" target="_blank" rel="external">Ford Mustang</a> 1:24 Scale Radio Control Sports Car from <a href="http://www.walmart.com/ip/New-Bright-1-24-Scale-Radio-Control-Sports-Car/24389673" target="_blank" rel="external">Walmart</a> for under 9 bucks.</p>
+<p>I’ve seen electronics enthusiasts and makers buy cheap RF cars and use parts for their projects. For example this cute <a href="https://www.youtube.com/watch?v=i_pWCUh3b0E" target="_blank" rel="external">Wall-E</a> robot.</p>
+<p>I wanted to see if I could use an <a href="http://forefront.io/a/beginners-guide-to-arduino">Arduino</a> to control the RC car.</p>
+<h2 id="Test-Everything-All-the-Time"><a href="#Test-Everything-All-the-Time" class="headerlink" title="Test Everything, All the Time"></a>Test Everything, All the Time</h2><p>So before I did anything, I tested that the car actually worked. This is to determine if what I was going to do next didn’t break the thing.</p>
+<p>I noticed when pressing forward/backward and left/right there was no granularity to the speed or turning. I heard clicking. It seemed there were just buttons controlling it. This means it should be fairly simple to hack and send signals from the Arduino.</p>
+<h2 id="Breaking-In"><a href="#Breaking-In" class="headerlink" title="Breaking In"></a>Breaking In</h2><p>So the first thing I did was remove the screw from the back (and a sticker) that would prevent me from opening up the remote.</p>
+<p><img src="/attachments/car-hacking/remote_apart.jpg" alt=""></p>
+<p>As you can see, as suspected, there are buttons for going forward (<code>FOR</code>), backward (<code>BACK</code>), left (<code>LEFT</code>) and right (<code>RIGHT</code>). I’ll use these later on. Whilst still attached to the back of the case I tested to see if pressing the buttons directly moved the car. It still worked.</p>
+<p>Next, getting the remote off the dependancy of the two AA batteries so that the remote could be powered by the same source as the Arduino. Since each AA battery is 1.5V, the two will create a voltage of 3 volts. The Arduino has a 3.3V header, so I thought I could power the controller it with that.</p>
+<p><img src="/attachments/car-hacking/remote_power.jpg" alt=""></p>
+<p>I desoldered the original connections to the battery compartment and soldered two wires, red to the positive and yellow to the negative (don’t have any black wire ;)).</p>
+<p><img src="/attachments/car-hacking/wiring_it_up.jpg" alt=""></p>
+<p>I wired it up and pressed the buttons on the remote and the RC car still worked. At this point a second car that I got for my daughter to play with started moving slightly in response to the button presses. My car is at 27 MHz and my daughter’s is at 49 MHz. So I don’t know if exposing the circuit is causing interference with the other car or if I damaged it in someway. However, the signals from her controller overrides my interference so there’s not a big issue here.</p>
+<p>So now I had the power working, now on to programatically pressing the movement buttons. I could have desoldered the buttons and added another wire in it’s place but I followed the switch wire back around to a spot on the circuit board that said <code>TP80</code>. Now there’s several of theres <code>TP</code> points all over the circuit board. I thought that these could be places on the board that could be used for testing circuit boards during manufacture. Maybe some sort of <strong>t</strong>est <strong>p</strong>oint? So I soldered a wire on to <code>TP80</code> to see if I could programatically send a <code>HIGH</code> or <code>LOW</code> signal to pin 13, like the “blink” of controlling a RC car and I got the following result:</p>
+<video controls="controls" src="/attachments/car-hacking/no_hands.mp4"></video>
+
+<p>It went forward for a second stopped for a second and so on until it hit an object! Not bad! And the buttons are still in tact too!</p>
+<p>So I wired up <code>TP81</code> to pin 12 and made the car go backward and forward for one second. And yep it worked.</p>
+<video controls="controls" src="/attachments/car-hacking/back_forward.mp4"></video>
+
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>And that’s where I got up to last night. Being an <a href="http://forefront.io/a/beginners-guide-to-arduino">absolute beginner</a> to electronics and getting an off-the-shelf product like this to be programmable is pretty amazing and fulfilling.</p>
+<p>The only thing that’s stopping anyone from doing anything like this, or anything for that matter, is themselves.</p>
+<p>Getting a remote control car for under 9 bucks is way cheaper than building something like this from scratch.</p>
+<h2 id="Next-Steps"><a href="#Next-Steps" class="headerlink" title="Next Steps"></a>Next Steps</h2><p>I want to be able to programatically turn the car and who know’s what else? Maybe using computer vision libraries to process video from a webcam and talk down a serial connection to the Arduino to control the car automatically? Any ideas? Let me know.</p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><p>The code for this project and it’s dependancies can be found below:</p>
+<ul>
+<li><a href="https://github.com/chalkers/BasicLibrary" target="_blank" rel="external">BasicLibrary</a> - used for the object orientated interface with digital/analog pins</li>
+<li><a href="https://github.com/chalkers/RC_Back_Forward/" target="_blank" rel="external">RC_Back_Forward</a> - code for making the car go forwards for a second then backwards for a second</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://forefront.io/a/hacking-9-buck-remote-controlled-car-with-arduino/" data-id="cisf3b3f90003uafo9alanwgz" class="article-share-link">Share</a>
+      
+        <a href="http://forefront.io/a/hacking-9-buck-remote-controlled-car-with-arduino/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Arduino/">Arduino</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RF/">RF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Reverse-Engineering/">Reverse Engineering</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/a/mistakes/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Mistakes
+        
+      </div>
+    </a>
+  
+  
+    <a href="/a/hacking-kinect-with-processing/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hacking the Kinect with Processing</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/That-Maker-Show/">That Maker Show</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Adafruit/">Adafruit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apple/">Apple</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Arduino/">Arduino</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Blog/">Blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ESP8266/">ESP8266</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Espruino/">Espruino</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IR/">IR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Internet-of-Things/">Internet of Things</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kinect/">Kinect</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LED/">LED</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Losant/">Losant</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PIR-Sensor/">PIR Sensor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Piezo/">Piezo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Processing/">Processing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RF/">RF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Reverse-Engineering/">Reverse Engineering</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Show-and-Tell/">Show and Tell</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Adafruit/" style="font-size: 10px;">Adafruit</a> <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/Arduino/" style="font-size: 20px;">Arduino</a> <a href="/tags/Blog/" style="font-size: 13.33px;">Blog</a> <a href="/tags/ESP8266/" style="font-size: 13.33px;">ESP8266</a> <a href="/tags/Espruino/" style="font-size: 10px;">Espruino</a> <a href="/tags/IR/" style="font-size: 10px;">IR</a> <a href="/tags/Internet-of-Things/" style="font-size: 10px;">Internet of Things</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Kinect/" style="font-size: 10px;">Kinect</a> <a href="/tags/LED/" style="font-size: 10px;">LED</a> <a href="/tags/Losant/" style="font-size: 10px;">Losant</a> <a href="/tags/PIR-Sensor/" style="font-size: 10px;">PIR Sensor</a> <a href="/tags/Piezo/" style="font-size: 10px;">Piezo</a> <a href="/tags/Processing/" style="font-size: 10px;">Processing</a> <a href="/tags/RF/" style="font-size: 10px;">RF</a> <a href="/tags/Reverse-Engineering/" style="font-size: 16.67px;">Reverse Engineering</a> <a href="/tags/Show-and-Tell/" style="font-size: 10px;">Show and Tell</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/02/">February 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/01/">January 2013</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/a/iot-intruder-detector/">Internet of Things Intruder Detector</a>
+          </li>
+        
+          <li>
+            <a href="/a/introducing-flasher-js/">Introducing Flasher.js</a>
+          </li>
+        
+          <li>
+            <a href="/a/origins-of-broken-computers/">The Origins of &quot;Broken&quot; Computers (and Software)</a>
+          </li>
+        
+          <li>
+            <a href="/a/that-maker-show-18/">That Maker Show Ep. 18</a>
+          </li>
+        
+          <li>
+            <a href="/a/that-maker-show-17/">That Maker Show Ep. 17</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Andrew Chalkley<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'forefrontio';
+  
+  var disqus_url = 'http://forefront.io/a/hacking-9-buck-remote-controlled-car-with-arduino/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-658908-16', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+<!-- Gaug.es Analytics -->
+<script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '50e13905f5a1f54d79000002');
+    t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+    t.src = 'https://d36ee2fcip1434.cloudfront.net/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+<!-- End Gaug.es Analytics -->
+
+
+  </div>
+</body>
+</html>
