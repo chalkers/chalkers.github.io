@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://forefront.io/"/>
-  <updated>2016-08-29T04:36:44.120Z</updated>
+  <updated>2016-08-29T04:55:16.315Z</updated>
   <id>http://forefront.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://forefront.io/a/iot-intruder-detector/"/>
     <id>http://forefront.io/a/iot-intruder-detector/</id>
     <published>2016-08-28T07:00:00.000Z</published>
-    <updated>2016-08-29T04:36:44.120Z</updated>
+    <updated>2016-08-29T04:55:16.315Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>Want to receive a text if there’s a bump in the night? Want an SMS if your cat is drinking from the toilet again? Want to get a text if a snooping parent or sibling comes in your room? This is a project for you!</p>
 <p>We’re going to use an ESP8266 based WiFi prototyping development board - the Adafruit Feather HUZZAH and IoT platform Losant to send an SMS when an intruder is detected.</p>
@@ -118,6 +118,7 @@
 <p>And it does! Awesome!</p>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Losant limits the SMS service to 1 per minute, which is fine for our purposes, but you can integrate with third party services such as telecom API provider Twilio which doesn’t have that restriction. </p>
 <p>Taking the project further, you may want to add a button to “Arm” the device, with an LED indicator, so it doesn’t send the motion detection JSON when you’re expecting movement. </p>
+<p>If you like this project why not give it some <em>Respect</em> on <a href="https://www.hackster.io/chalkers/internet-of-things-intruder-detector-e45246" target="_blank" rel="external">Hackster.io</a>?</p>
 ]]></content>
     
     <summary type="html">
@@ -129,13 +130,13 @@
     
       <category term="Arduino" scheme="http://forefront.io/tags/Arduino/"/>
     
-      <category term="ESP8266" scheme="http://forefront.io/tags/ESP8266/"/>
-    
       <category term="PIR Sensor" scheme="http://forefront.io/tags/PIR-Sensor/"/>
     
       <category term="Internet of Things" scheme="http://forefront.io/tags/Internet-of-Things/"/>
     
       <category term="Losant" scheme="http://forefront.io/tags/Losant/"/>
+    
+      <category term="ESP8266" scheme="http://forefront.io/tags/ESP8266/"/>
     
   </entry>
   
